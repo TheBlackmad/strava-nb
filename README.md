@@ -38,7 +38,7 @@ To set up Strava-nb, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/Strava-nb.git
+    git clone https://github.com/TheBlackmad/strava-nb.git
     cd Strava-nb
     ```
 
@@ -72,7 +72,7 @@ To set up Strava-nb, follow these steps:
     jupyter notebook
     ```
 
-2. Open `strava_analysis.ipynb` in your browser.
+2. Open `TrailRun.ipynb` in your browser.
 
 3. Run the cells in the notebook to connect to your database, query data, and generate visualizations.
 
