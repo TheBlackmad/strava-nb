@@ -1,0 +1,9 @@
+[database]
+host=DB_HOST
+database=DATABASE
+user=USERNAME
+password=PASSWORD
+
+[meteosat]
+host=meteostat.p.rapidapi.com
+key=YOUR_KEY
