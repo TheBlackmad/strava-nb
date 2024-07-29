@@ -2,6 +2,8 @@
 
 Strava-nb is a Jupyter Notebook project designed to access and analyze workout data from a locally hosted PostgreSQL database. The database contains detailed information about various workouts, similar to what is available on Strava. This project allows you to query, visualize, and analyze your workout data directly from your local server.
 
+By the time being, this notebook performs a data collection, cleansing and preparation for analysis of the available data before comming into the model preparation. By performing a cross-validation, it is decided which model is most efficiente and precise and this is saved to a file for later processing.
+
 ## Table of Contents
 
 - [Introduction](#introduction)
