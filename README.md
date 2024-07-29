@@ -97,6 +97,7 @@ db_params = {
 }
 
 conn = psycopg2.connect(**db_params)
+```
 
 Ensure that your PostgreSQL server is running and accessible from your local machine.
 
