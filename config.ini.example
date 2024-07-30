@@ -6,4 +6,4 @@ password=PASSWORD
 
 [meteosat]
 host=meteostat.p.rapidapi.com
-key=YOUR_KEY
+key=__YOUR_KEY__
