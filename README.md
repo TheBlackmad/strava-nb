@@ -2,7 +2,7 @@
 
 Strava-nb is a Jupyter Notebook project designed to access and analyze workout data from a locally hosted PostgreSQL database. The database contains detailed information about various workouts, similar to what is available on Strava. This project allows you to query, visualize, and analyze your workout data directly from your local server.
 
-By the time being, this notebook performs a data collection, cleansing and preparation for analysis of the available data before comming into the model preparation. By performing a cross-validation, it is decided which model is most efficiente and precise and this is saved to a file for later processing.
+By the time being, this notebook performs a data collection, cleansing and preparation for analysis of the available data before comming into the model preparation. By performing a cross-validation, it is decided which model is most efficiente and precise and this is saved to a file for later processing. In this Notebook, the workout data is located in a PostgreSQL database in the local network.
 
 ## Table of Contents
 
@@ -16,7 +16,8 @@ By the time being, this notebook performs a data collection, cleansing and prepa
 
 ## Introduction
 
-Strava-nb is a tool for athletes and fitness enthusiasts who want to have a local and customizable way of accessing their workout data. With this project, you can leverage the power of PostgreSQL and Jupyter Notebooks to perform in-depth analysis and visualization of your workout routines.
+Strava-nb is a tool for athletes and fitness enthusiasts who want to have a local and customizable way of accessing their workout data. With this project, you can leverage the power of PostgreSQL and Jupyter Notebooks to perform in-depth analysis and visualization of your workout routines. Dataset is extended with additional features from the existing dataset and running KPIs as well as weather information for each point.
+
 
 ## Features
 
@@ -24,6 +25,7 @@ Strava-nb is a tool for athletes and fitness enthusiasts who want to have a loca
 - Query and analyze workout metrics such as distance, duration, elevation gain, and more.
 - Generate visualizations to track progress and performance over time.
 - Customize queries and visualizations to fit your specific needs.
+
 
 ## Installation
 
@@ -44,7 +46,7 @@ To set up Strava-nb, follow these steps:
     cd strava-nb
     ```
 
-2. Install the required Python packages:
+2. Install the required Python packages (not needed using Jupyter Notebook, installation instructions are included in the notebook itself):
     ```bash
     pip install -r requirements.txt
     ```
@@ -80,28 +82,8 @@ To set up Strava-nb, follow these steps:
 
 ## Configuration
 
-Update the database connection settings in the notebook to read from the `config.ini` file. Look for the following section in the notebook and modify it accordingly:
+Update the database connection settings in the notebook to read from the `config.ini` file. Ensure that your PostgreSQL server is running and accessible from your local machine. An script to create a PostreSQL Database is included in the project (file). Population of this database with actual data is up to the user as this is very personal data included (heartrate, speeds, etc). In my case, this data is been updated on a regular basis to include the most updated data about the workouts.
 
-```python
-import psycopg2
-import configparser
-
-# Read database configuration from config.ini
-config = configparser.ConfigParser()
-config.read('config.ini')
-
-db_params = {
-    'dbname': config['database']['database'],
-    'user': config['database']['user'],
-    'password': config['database']['password'],
-    'host': config['database']['host'],
-    'port': '5432'  # Modify if your PostgreSQL server uses a different port
-}
-
-conn = psycopg2.connect(**db_params)
-```
-
-Ensure that your PostgreSQL server is running and accessible from your local machine.
 
 ## Contributing
 
